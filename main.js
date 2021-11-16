@@ -35,11 +35,12 @@ function addvalor(valor){
 }
 
 function apagarvalor(id,valor){
-    id_element = document.getElementById(id)
-    quantidadedevalor = document.getElementById(valor).value
-    
-    somadosvalores = (parseFloat(somadosvalores)-parseFloat(quantidadedevalor)).toFixed(2)
-
+     id_element = document.getElementById(id)
+    quantidadedevalor = document.getElementById(valor).innerHTML
+    quantidadedevalor = quantidadedevalor.substr(1)
+    quantidadedevalor = quantidadedevalor.substr(1)
+    somadosvalores = (somadosvalores-parseFloat(quantidadedevalor)).toFixed(2)
+  
     id_element.remove()
     atualizarvalor()
 }
