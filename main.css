@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #EFEFEF;
+    font-family: 'Roboto', sans-serif;
+}
+
+nav{
+    height: 4em;
+    background-color: #D85050;
+    padding: 0.2em 3em;
+    display: flex;
+}
+#titulo_logo{
+    color: white;
+    align-self: center;
+}
+
+.padding-normal{
+    padding: 0.2em 3em;
+}
+
+#section_one{
+    display: flex;
+    justify-content: space-around;
+}
+
+.div_dadosdoproduto{
+    width: 20em;
+    height: 10em;
+    background: white;
+    border-radius: 2em;
+    margin-left: 3em;
+}
+
+#inputvalor{
+    border: none;
+    border-bottom: solid 2px;
+    padding: 1em 2em;
+}
+#botaoadicionar{
+    border: none;
+    color: black;
+    font-family: 'Roboto';
+    background: #40B653;
+    border-radius: 0.6em;
+    padding: 1em 2em;
+}
+
+.div_listadecompras{
+    width: 20em;
+    background: white;
+    border-radius: 2em;
+    margin-left: 3em;
+}
+
+
+ul{
+    margin: 0;
+    padding: 0;
+}
+
+.listadeprodutos_li-p{
+    margin: 0;
+}
+.listadeprodutos-li{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 8px;
+}
+.div_divisoria{
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+}
+
+#subtotal{
+    font-size: larger;
+}
+
+#inputtroco{
+    border: none;
+    border-bottom: solid 2px;
+    padding: 1em 2em;
+}
+#h5_valorpago{
+    margin: 0;
+}
+#botaoadd{
+    padding: 1em 1em;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    background: #40B653;
+    font-weight: 600;
+}
+
+#troco_p{
+    text-align: end;
+}
+.listadeprodutos{
+    list-style-type: none;
+}
