@@ -36,7 +36,7 @@ function addvalor(valor){
 
 function apagarvalor(id,valor){
     id_element = document.getElementById(id)
-    quantidadedevalor = document.getElementById(valor).innerHTML
+    quantidadedevalor = document.getElementById(valor).value
     
     somadosvalores = (parseFloat(somadosvalores)-parseFloat(quantidadedevalor)).toFixed(2)
 
