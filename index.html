@@ -24,7 +24,7 @@
                 <h4>Adicione o valor do produto e a quantidade</h4>
                 
                 <input type="number" id="inputvalor" name="valor" placeholder="R$00,00">
-                <input type="number" id="inputquantidade" name="quantidade" placeholder="x1" value="1">
+                <input type="number" id="inputquantidade" onchange="atualizarquantidadepadrao()" onkeyup="atualizarquantidadepadrao()" name="quantidade" placeholder="x1" value="1">
                 <input type="button" id="botaoadd" onclick="addvalor('inputvalor')" value="Adicionar" >
             </div>
 

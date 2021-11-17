@@ -87,3 +87,10 @@ function limparlistadecompras(){
     calculartroco()
 
 }
+
+function atualizarquantidadepadrao(){
+    quant = document.getElementById('inputquantidade').value
+    if(quant <= 0){
+    document.getElementById('inputquantidade').value = "1"
+    }
+}
