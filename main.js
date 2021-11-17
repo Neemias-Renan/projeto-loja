@@ -8,8 +8,12 @@ function atualizarvalor(){
 
 function addvalor(valor){
     valor = parseFloat(document.getElementById(valor).value).toFixed(2)
+    quantidade = parseInt(document.getElementById("inputquantidade").value)
+
+    valor = parseFloat(valor*quantidade).toFixed(2)
     
-    if(valor!="NaN"){
+   
+    if(valor!="NaN" & valor>0){
         ul = document.getElementById('listadeprodutos')
         li = document.createElement('li')
         li.setAttribute('id','li_'+ids+'')
@@ -31,6 +35,8 @@ function addvalor(valor){
         somadosvalores = (parseFloat(somadosvalores)+parseFloat(valor)).toFixed(2)
         ids = ids+1
         atualizarvalor()
+        document.getElementById('inputvalor').value=''
+        document.getElementById('inputquantidade').value='1'
     }
 }
 
@@ -49,8 +55,35 @@ function calculartroco(){
     troco = document.getElementById('inputtroco').value
     if(parseFloat(troco) >= 0.00){
         quantidadedevolver = parseFloat(troco-somadosvalores).toFixed(2)
-        document.getElementById('quantidadedetroco').innerHTML = quantidadedevolver
+        if(quantidadedevolver<0){
+            document.getElementById('acaoasertomada').innerHTML = "Falta "
+            document.getElementById('quantidadedetroco').innerHTML = quantidadedevolver.substr(1)
+
+        }
+        else if(quantidadedevolver==0){
+            document.getElementById('acaoasertomada').innerHTML = "Valor Exato "
+            document.getElementById('quantidadedetroco').innerHTML = "00,00"
+        }
+        else{
+            document.getElementById('acaoasertomada').innerHTML = "Devolva "
+            document.getElementById('quantidadedetroco').innerHTML = quantidadedevolver
+        }
+
+        // document.getElementById('quantidadedetroco').innerHTML = quantidadedevolver
+    }
+    else{
+        document.getElementById('acaoasertomada').innerHTML = ""
+        document.getElementById('quantidadedetroco').innerHTML = "00,00"
     }
     
+
+}
+
+function limparlistadecompras(){
+    document.getElementById("listadeprodutos").innerHTML = ""
+    document.getElementById('inputtroco').value=""
+    somadosvalores = 0
+    atualizarvalor()
+    calculartroco()
 
 }

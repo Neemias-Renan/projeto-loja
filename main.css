@@ -39,6 +39,7 @@ nav{
     border: none;
     border-bottom: solid 2px;
     padding: 1em 2em;
+    width: 6em;
 }
 #botaoadicionar{
     border: none;
@@ -104,4 +105,25 @@ ul{
 }
 .listadeprodutos{
     list-style-type: none;
+}
+
+#div_precos-opcoes{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#botaolimpar{
+    border: none;
+    padding: 1em;
+    background: crimson;
+    border-radius: 0.4em;
+    font-weight: 600;
+    font-family: 'Roboto';
+    color: white;
+}
+#inputquantidade{
+    border: none;
+    border-bottom: solid 2px;
+    padding: 1em 2em;
+    width: 2em;
 }

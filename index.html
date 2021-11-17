@@ -20,9 +20,10 @@
     <div class="div_divisoria">
         <div>
             <div class="div_dadosdoproduto padding-normal">
-                <h4>Adicione o valor do produto</h4>
+                <h4>Adicione o valor do produto e a quantidade</h4>
                 
                 <input type="number" id="inputvalor" name="valor" placeholder="R$00,00">
+                <input type="number" id="inputquantidade" name="quantidade" placeholder="x1" value="1">
                 <input type="button" id="botaoadd" onclick="addvalor('inputvalor')" value="Adicionar" >
             </div>
 
@@ -31,9 +32,15 @@
             </div>
 
             <div class="div_listadecompras padding-normal">
-                <h4>Preços</h4>
+                <div id="div_precos-opcoes">
+                    <h4>Preços</h4>
+                    <input id="botaolimpar" onclick="limparlistadecompras()" type="button" value="Limpar">
+                </div>
+                
                 <div>
-                    <ul id="listadeprodutos"></ul>
+                    <ul id="listadeprodutos">
+                        
+                    </ul>
                 </div>
             </div>
         </div>
@@ -48,7 +55,7 @@
                 </div>
 
                 
-                <p id="troco_p">Devolva <b>R$<span id="quantidadedetroco">0.00</span></b></p>
+                <p id="troco_p"><span id="acaoasertomada"></span><b>R$<span id="quantidadedetroco">0.00</span></b></p>
             </div>
 
         </div>
