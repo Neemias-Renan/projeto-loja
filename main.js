@@ -1,6 +1,8 @@
 ids = 0
 somadosvalores = 0
 
+
+
 var dadosdosprodutos = ['613|Papel Toalha Essencial|10.50', '828|Papel Aluminio|4.50', 'c64|Arames - Amarrilho|29.00', '947|Caixa de Pizza n30|41.00', '172|Caixa de Pizza n35|42.00', '585|Filme PVC 38*600mt|66.00', '735|Filme PVC 100m|12.50', '660|Filme PVC 300m|29.90', '422|Etiqueta de Preço 1uni|1.80', 'd08|Etiqueta de Preço 10uni|16.50', '88b|Etiqueta de Preço 5uni|8.50', '507|Etiqueta de Peso 5uni|27.50', '024|Etiqueta de Peso 1uni|6.00', '475|Guardanapos Solis|0.85', '44e|Guardanapos Reserva|0.90']
 var codigos = ['613', '828', 'c64', '947', '172', '585', '735', '660', '422', 'd08', '88b', '507', '024', '475', '44e']
 
