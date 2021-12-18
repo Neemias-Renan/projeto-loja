@@ -28,7 +28,10 @@
                 
                 <input type="text" id="inputnomedoproduto" name="produto" placeholder="Produto">
                 <input type="text" id="inputcodigo" name="codigo" placeholder="Gere o Código" disabled>
-                <input type="button" id="botaogerarcodigo" onclick= "addcodigo('inputnomedoproduto')" value="Gerar Código" >
+                <input type="number" id="inputvalor" name="valor" placeholder="R$00,00">
+                <input type="button" id="botaogerarcodigo" onclick= "addcodigo()" value="Gerar Código" >
+                <input type="button" id="botaosalvarnoestoque" onclick= "addnoestoque('inputnomedoproduto','inputcodigo','inputvalor')" value="Salvar no Estoque" >
+
             </div>
 
             <div class="padding-normal">
@@ -37,7 +40,7 @@
 
             <div class="div_listadecompras padding-normal">
                 <div id="div_precos-opcoes">
-                    <h4>Preços</h4>
+                    <h4>Produtos</h4>
                 </div>
                 
                 <div>

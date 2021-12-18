@@ -33,12 +33,22 @@
                 <input type="button" id="botaoadd" onclick="addvalor('inputvalor')" value="Adicionar" >
             </div>
 
+            <div class="div_dadosdoproduto padding-normal">
+                <h4>Adicione pelo código</h4>
+                
+                <input type="text" id="inputcodigo" name="codigo" placeholder="Digite o Código do produto">
+                <input type="number" id="inputquantidadepelocodigo" onchange="atualizarquantidadepadrao()" onkeyup="atualizarquantidadepadrao()" name="quantidade" placeholder="x1" value="1">
+                <input type="button" id="botaoadd" onclick="addproduto('inputcodigo')" value="Adicionar" >
+            </div>
+
             <div class="padding-normal">
                 <h1>Lista de Compras</h1>
             </div>
 
             <div class="div_listadecompras padding-normal">
                 <div id="div_precos-opcoes">
+                    <h4>Produto</h4>
+                    <h4>Quantidade</h4>
                     <h4>Preços</h4>
                     <input id="botaolimpar" onclick="limparlistadecompras()" type="button" value="Limpar">
                 </div>
