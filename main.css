@@ -12,6 +12,8 @@ nav{
     background-color: #D85050;
     padding: 0.2em 3em;
     display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 #titulo_logo{
     color: white;
@@ -100,6 +102,25 @@ ul{
     font-weight: 600;
 }
 
+#botaoestoque{
+    padding: 1em 1em;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Roboto';
+    background: #ffb004;
+    font-weight: 600;
+    color: white;
+}
+
+.div_title{
+    display: flex;
+    align-content: center;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1em;
+}
 #troco_p{
     text-align: end;
 }

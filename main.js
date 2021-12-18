@@ -94,3 +94,25 @@ function atualizarquantidadepadrao(){
     document.getElementById('inputquantidade').value = "1"
     }
 }
+
+var produtos = []
+var codigos = []
+function addcodigo(nome){
+    code = Math.random().toString(16).substr(2, 3)
+    const procurar = codigos.find(element => element == code);
+    
+    document.getElementById('inputcodigo').value = code
+
+    codigos.push(code)
+
+
+    console.log(code, procurar)
+}
+
+function procurar(){
+    
+}
+
+// produto = document.getElementById(nome).value
+// produtos.push(produto)
+// console.log(produtos)
