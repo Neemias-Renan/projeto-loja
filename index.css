@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+.div_valorfinal{
+    margin-top: 2em;
+}
+
+.div_first{
+    width: 100%;
+    height: 100%;
+    background: none;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+.table_produtos{
+    width: 100%;
+    padding: 20px;
+}
+
+.div_content{
+    height: 73%;
+    background: #f4f4f4;
+    border-radius: 1em;
+    box-shadow: #00000047 0px 5px 9px;
+    margin-top: 2em;
+}
+.label_input{
+    font-size: x-small;
+}
+
+.margin_none{
+    margin: 0;
+}
+
+.div_main{
+    background: white;
+    height: 90%;
+    padding: 0 2em;
+}
+.div_nav{
+    background: white;
+    padding: 0 0.6em;
+    height: 13%;
+    border-radius: 20px 20px 0px 0px;
+    box-shadow: #5c5c5c59 0px 3px 16px 5px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+#inputValordoProduto{
+    width: 120px;
+    height: 46px;
+    border-radius: 11px;
+    border: none;
+    background: white;
+    filter: drop-shadow(2px 4px 2px #bbb);
+    padding: 0px 5px;
+    text-align: end;
+
+}
+
+#inputQuantidadedoProduto{
+    width: 120px;
+    height: 46px;
+    border-radius: 11px;
+    border: none;
+    background: white;
+    filter: drop-shadow(2px 4px 2px #bbb);
+    padding: 0px 5px;
+    text-align: end;
+}
+
+#buttonConfirmar{
+    border: none;
+    background: none;
+}
+
+.div_nav-division{
+    display: flex;
+    flex-direction: column;
+    align-content: flex-start;
+    justify-content: center;
+}
