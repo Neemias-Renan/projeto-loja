@@ -3,55 +3,79 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Embalagens União</title>
+    <title>Calcula Ae</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='index.css'>
-    <script src='main.js'></script>
+    <link rel='stylesheet' type='text/css' media='screen' href='src/main.css'>
+    <script src='src/main.js'></script>
 </head>
 <body>
-    <div class="div_first">
-        <div class="div_main">
-            <div class="div_valorfinal">
-                <p class="margin_none">Valor Final</p>
-                <h2 class="margin_none">R$00,00</h2>
-            </div>
-            <div class="div_content">
-                <table class="table_produtos">
-                    <tbody>
-                        <tr>
-                            
-                            <td><b>Preço</b></td>
-                            <td><b>Quantidade</b></td>
-                            
-                        </tr>                       
-                        <tr>
-                            <td>1sd</td>
-                            <td>42</td>
-                        </tr>
+    <header class="header">
+        <h2>Calcula Ae</h2>
+    </header>
 
-                        <tr>
-                            <td>52</td>
-                            <td>63</td>
-                        </tr>
-                    </tbody>
-                </table>
+    <div class="desktop">
+        <div class="espaco" id="espacoUm">
+            <div id="divisaoUm_espacoUm">
+                <div class="cabecalho">
+                    <h3 id="titulo-carrinho">Carrinho</h3>
+                    <a href="#" id="limpar">Limpar</a>
+                </div>
+
+                <div class="carrinho">
+                    <table>
+                        <tbody class="tabela-carrinho">
+                            <tr class="trTabela">
+                                <th class="thTitulo">Preço</th>
+                                <th class="thTitulo">Quantidade</th>
+                                <th class="thTitulo">Remover</th>
+                            </tr>
+
+                            <tr class="trTabela marginTop">
+                                <th class="thDescricao">R$7.00</th>
+                                <th class="thDescricao">5 Unidades</th>
+                                <th>
+                                    <button id="botaoRemover"><img src="src/img/remove.svg"></button>
+                                </th>
+                                <th class="trDescricao"></th>
+                            </tr>
+
+                            
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="retanguloUM"></div>
+                <div class="retanguloDOIS"></div>
             </div>
 
+            <div id="divisaoDois_espacoUm">
+                <div class="divisaoInputs">
+                    <label class="label_entradas" for="valor">Valor do Produto</label>
+                    <input class="entrada" type="number" name="valor" id="valordoproduto">
+                </div>
+
+                <div class="divisaoInputs">
+                    <label class="label_entradas" for="quantidade">Quantidade</label>
+                    <input class="entrada" type="number" name="quantidade" id="quantidadedoproduto">
+                </div>
+
+                <div class="divisaoInputs">
+                    <label class="label_entradas" for="botao"></label>
+                    <button class="entrada" id="botaoConfirmar" name="botao"><img src="src/img/confirm.svg"></button>
+                </div>
+            </div>
         </div>
-
-        <div class="div_nav">
-            <div class="div_nav-division">
-                <label for="valor" class="label_input">Valor do Produto</label>
-                <input type="number" inputmode="numeric" name="valor" id="inputValordoProduto" placeholder="R$00,00">
-            </div>
-
-            <div class="div_nav-division">
-                <label for="quantidade" class="label_input">Quantidade</label>
-                <input type="number" inputmode="numeric" name="quantidade" id="inputQuantidadedoProduto" placeholder="1">
-            </div>
-
-            <button id="buttonConfirmar"><img src="https://img.icons8.com/fluency/48/000000/checked.png"/></button>
+    
+        <div class="espaco" id="espacoDois">
+    
         </div>
     </div>
+    
+    <div class="mobile">
+
+
+    </div>
+
+    
 </body>
 </html>
