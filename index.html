@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="pt-br">
 <head>
     <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <title>Calcula Ae</title>
+    
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='src/main.css'>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>    
@@ -20,7 +20,7 @@
             <div id="divisaoUm_espacoUm">
                 <div class="cabecalho">
                     <h3 id="titulo-carrinho">Carrinho</h3>
-                    <a href="#" id="limpar">Limpar</a>
+                    <a href="#" id="limpar" onclick="limpar()">Limpar</a>
                 </div>
 
                 <div class="carrinho">
@@ -32,20 +32,20 @@
                                 <th class="thTitulo">Remover</th>
                             </tr>
                             
-                            <tr class="trTabela marginTop lista">
+                            <tr class="trTabela marginTop lista" id="tr1">
                                 <th class="thDescricao">R$7.00</th>
                                 <th class="thDescricao">5 Unidades</th>
                                 <th>
-                                    <button id="botaoRemover"><img src="src/img/remove.svg"></button>
+                                    <button class="botaoRemover" onclick="remover('tr1')"><img src="src/img/remove.svg"></button>
                                 </th>
                                 <th class="trDescricao"></th>
                             </tr>
 
-                            <tr class="trTabela marginTop lista">
+                            <tr class="trTabela marginTop lista" id="tr2">
                                 <th class="thDescricao">R$7.00</th>
                                 <th class="thDescricao">5 Unidades</th>
                                 <th>
-                                    <button id="botaoRemover"><img src="src/img/remove.svg"></button>
+                                    <button class="botaoRemover" onclick="remover('tr2')"><img src="src/img/remove.svg"></button>
                                 </th>
                                 <th class="trDescricao"></th>
                             </tr>
@@ -62,29 +62,29 @@
             <div id="divisaoDois_espacoUm">
                 <div class="divisaoInputs">
                     <label class="label_entradas" for="valor">Valor do Produto</label>
-                    <input class="entrada" type="number" name="valor" id="valordoproduto">
+                    <input class="entrada" type="number" name="valor" id="valordoproduto" placeholder="R$00,00">
                 </div>
 
                 <div class="divisaoInputs">
                     <label class="label_entradas" for="quantidade">Quantidade</label>
-                    <input class="entrada" type="number" name="quantidade" id="quantidadedoproduto">
+                    <input class="entrada" type="number" name="quantidade" id="quantidadedoproduto" placeholder="0">
                 </div>
 
                 <div class="divisaoInputs">
                     <label class="label_entradas" for="botao"></label>
-                    <button class="entrada" id="botaoConfirmar" name="botao"><img src="src/img/confirm.svg"></button>
+                    <button class="entrada" id="botaoConfirmar" name="botao" onclick="confirmar(valordoproduto,quantidadedoproduto)"><img src="src/img/confirm.svg"></button>
                 </div>
             </div>
         </div>
     
         <div class="espaco" id="espacoDois">
             <div class="divisao_espacoDois">
-                <label class="label_saidas" for="">Valor Final</label>
-                <h1 class="h1_valorFinal">R$<span id="ValorFinal">07.90</span></h1>
+                <label class="label_saidas" for="valorfinal">Valor Final</label>
+                <h1 class="h1_valorFinal" name="valorfinal">R$<span id="ValorFinal">07.90</span></h1>
             </div>
             <div class="divisao_espacoDois">
-                <label class="label_saidas" for="">Valor Pago</label>
-                <input class="entrada" id="inputValorPago" type="number" placeholder="R$00,00">
+                <label class="label_saidas" for="valorpago">Valor Pago</label>
+                <input class="entrada" id="inputValorPago" title="Adicione o valor pago" name="valorpago" type="number" placeholder="R$00,00">
             </div>
             <div class="divisao_espacoDois">
                 <h2>Devolva R$<span>2,10</span></h2>
@@ -97,13 +97,13 @@
             <div class="divisaoUm_main">
                 <div id="divUm_espacoUm">
                     <label class="label_saidas" for="">Valor Final</label>
-                    <h1 class="h1_valorFinal">R$<span id="ValorFinal">07.90</span></h1>
+                    <h1 class="h1_valorFinal">R$<span id="ValorFinalMobile">07.90</span></h1>
                 </div>
 
                 <div id="divUm_espacoDois">
                     <div class="divisao_espacoDois">
                         <label class="label_saidas" for="">Valor Pago</label>
-                        <input class="entrada" id="inputValorPago" type="number" placeholder="R$00,00">
+                        <input class="entrada" id="inputValorPagoMobile" type="number" placeholder="R$00,00">
                     </div>
                     <div class="divisao_espacoDois">
                         <h2 id="resultadoFinal">Devolva R$<span>2,10</span></h2>
@@ -112,10 +112,10 @@
             </div>
 
             <div class="divisaoDois_main">
-                <div id="divisaoUm_espacoUm">
+                <div id="divisaoUm_espacoDois">
                 <div class="cabecalho">
-                    <h3 id="titulo-carrinho">Carrinho</h3>
-                    <a href="#" id="limpar">Limpar</a>
+                    <h3 id="tituloMobile-carrinho">Carrinho</h3>
+                    <a href="#" id="limparMobile" onclick="limpar()">Limpar</a>
                 </div>
 
                 <div class="carrinho">
@@ -127,35 +127,35 @@
                                 <th class="thTitulo">Remover</th>
                             </tr>
 
-                            <tr class="trTabela marginTop">
+                            <tr class="trTabela marginTop" id="tr1">
                                 <th class="thDescricao">R$7.00</th>
                                 <th class="thDescricao">5 Unidades</th>
                                 <th>
-                                    <button id="botaoRemover"><img src="src/img/remove.svg"></button>
+                                    <button class="botaoRemover" onclick="remover('tr1')"><img src="src/img/remove.svg"></button>
                                 </th>
                             </tr>
 
-                            <tr class="trTabela marginTop">
+                            <tr class="trTabela marginTop" id="tr2">
                                 <th class="thDescricao">R$7.00</th>
                                 <th class="thDescricao">5 Unidades</th>
                                 <th>
-                                    <button id="botaoRemover"><img src="src/img/remove.svg"></button>
+                                    <button class="botaoRemover" onclick="remover('tr2')"><img src="src/img/remove.svg"></button>
                                 </th>
                             </tr>
 
-                            <tr class="trTabela marginTop">
+                            <tr class="trTabela marginTop" id="tr3">
                                 <th class="thDescricao">R$7.00</th>
                                 <th class="thDescricao">5 Unidades</th>
                                 <th>
-                                    <button id="botaoRemover"><img src="src/img/remove.svg"></button>
+                                    <button class="botaoRemover" onclick="remover('tr3')"><img src="src/img/remove.svg"></button>
                                 </th>
                             </tr>
 
-                            <tr class="trTabela marginTop">
+                            <tr class="trTabela marginTop" id="tr4">
                                 <th class="thDescricao">R$7.00</th>
                                 <th class="thDescricao">5 Unidades</th>
                                 <th>
-                                    <button id="botaoRemover"><img src="src/img/remove.svg"></button>
+                                    <button class="botaoRemover" onclick="remover('tr4')"><img src="src/img/remove.svg"></button>
                                 </th>
                             </tr>
 
@@ -172,17 +172,17 @@
         <div class="footer">
             <div class="divisaoInputs">
                 <label class="label_entradas" for="valor">Valor do Produto</label>
-                <input class="entrada" type="number" name="valor" id="valordoproduto">
+                <input class="entrada" type="number" name="valor" title="adicione o valor do produto"id="valordoprodutoMobile" placeholder="R$00,00">
             </div>
 
             <div class="divisaoInputs">
                 <label class="label_entradas" for="quantidade">Quantidade</label>
-                <input class="entrada" type="number" name="quantidade" id="quantidadedoproduto">
+                <input class="entrada" type="number" name="quantidade" title="adicione a quantidade do produto" id="quantidadedoprodutoMobile" placeholder="0">
             </div>
 
             <div class="divisaoInputs">
                 <label class="label_entradas" for="botao"></label>
-                <button class="entrada" id="botaoConfirmar" name="botao"><img src="src/img/confirm.svg"></button>
+                <button class="entrada" id="botaoConfirmarMobile" name="botao"><img src="src/img/confirm.svg"></button>
             </div>
         </div>
     </div>

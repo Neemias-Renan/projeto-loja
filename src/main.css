@@ -52,7 +52,13 @@ body{
     justify-content: flex-start;
     align-items: center;
 }
-
+#divisaoUm_espacoDois{
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
 #divisaoDois_espacoUm{
     height: 20%;
     display: flex;
@@ -98,6 +104,13 @@ body{
     color: #D94141;
     font-weight: 800;
 }
+
+#limparMobile{
+    text-decoration: none;
+    color: #D94141;
+    font-weight: 800;
+}
+
 
 .carrinho{
     background-color: #D94141;
@@ -171,7 +184,7 @@ th{
     margin-top: 1em;
 }
 
-#botaoRemover{
+.botaoRemover{
     background: #D94141;
     box-shadow: -3px -3px 9px #F06363, 4px 3px 9px -1px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
@@ -213,6 +226,9 @@ th{
     font-weight: 300;
 }
 #ValorFinal{
+    font-weight: 800;
+}
+#ValorFinalMobile{
     font-weight: 800;
 }
 #inputValorPago{
@@ -283,6 +299,9 @@ th{
     #botaoConfirmar {
         width: 100%;
     }
+    #botaoConfirmarMobile {
+        width: 100%;
+    }
     .divisaoUm_main{
         width: 100%;
         height: 7em;
@@ -333,6 +352,8 @@ th{
     .carrinho {
         width: auto;
         height: 13em;
+        display: flex;
+        align-items: flex-start;
     }
     .retanguloUM {
         width: 20em;
@@ -350,7 +371,7 @@ th{
         margin-left: -6em;
     }
     .tabela{
-        margin-top: 6em;
+        /* margin-top: 6em; */
     }
 
 }
