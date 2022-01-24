@@ -39,6 +39,15 @@
                                 <th class="trDescricao"></th>
                             </tr>
 
+                            <tr class="trTabela marginTop">
+                                <th class="thDescricao">R$7.00</th>
+                                <th class="thDescricao">5 Unidades</th>
+                                <th>
+                                    <button id="botaoRemover"><img src="src/img/remove.svg"></button>
+                                </th>
+                                <th class="trDescricao"></th>
+                            </tr>
+
                             
 
                         </tbody>
@@ -67,13 +76,113 @@
         </div>
     
         <div class="espaco" id="espacoDois">
-    
+            <div class="divisao_espacoDois">
+                <label class="label_saidas" for="">Valor Final</label>
+                <h1 class="h1_valorFinal">R$<span id="ValorFinal">07.90</span></h1>
+            </div>
+            <div class="divisao_espacoDois">
+                <label class="label_saidas" for="">Valor Pago</label>
+                <input class="entrada" id="inputValorPago" type="number" placeholder="R$00,00">
+            </div>
+            <div class="divisao_espacoDois">
+                <h2>Devolva R$<span>2,10</span></h2>
+            </div>
         </div>
     </div>
     
     <div class="mobile">
+        <div class="main">
+            <div class="divisaoUm_main">
+                <div id="divUm_espacoUm">
+                    <label class="label_saidas" for="">Valor Final</label>
+                    <h1 class="h1_valorFinal">R$<span id="ValorFinal">07.90</span></h1>
+                </div>
 
+                <div id="divUm_espacoDois">
+                    <div class="divisao_espacoDois">
+                        <label class="label_saidas" for="">Valor Pago</label>
+                        <input class="entrada" id="inputValorPago" type="number" placeholder="R$00,00">
+                    </div>
+                    <div class="divisao_espacoDois">
+                        <h2 id="resultadoFinal">Devolva R$<span>2,10</span></h2>
+                    </div>
+                </div>
+            </div>
 
+            <div class="divisaoDois_main">
+                <div id="divisaoUm_espacoUm">
+                <div class="cabecalho">
+                    <h3 id="titulo-carrinho">Carrinho</h3>
+                    <a href="#" id="limpar">Limpar</a>
+                </div>
+
+                <div class="carrinho">
+                    <table class="tabela">
+                        <tbody class="tabela-carrinho">
+                            <tr class="trTabela">
+                                <th class="thTitulo">Preço</th>
+                                <th class="thTitulo">Quantidade</th>
+                                <th class="thTitulo">Remover</th>
+                            </tr>
+
+                            <tr class="trTabela marginTop">
+                                <th class="thDescricao">R$7.00</th>
+                                <th class="thDescricao">5 Unidades</th>
+                                <th>
+                                    <button id="botaoRemover"><img src="src/img/remove.svg"></button>
+                                </th>
+                            </tr>
+
+                            <tr class="trTabela marginTop">
+                                <th class="thDescricao">R$7.00</th>
+                                <th class="thDescricao">5 Unidades</th>
+                                <th>
+                                    <button id="botaoRemover"><img src="src/img/remove.svg"></button>
+                                </th>
+                            </tr>
+
+                            <tr class="trTabela marginTop">
+                                <th class="thDescricao">R$7.00</th>
+                                <th class="thDescricao">5 Unidades</th>
+                                <th>
+                                    <button id="botaoRemover"><img src="src/img/remove.svg"></button>
+                                </th>
+                            </tr>
+
+                            <tr class="trTabela marginTop">
+                                <th class="thDescricao">R$7.00</th>
+                                <th class="thDescricao">5 Unidades</th>
+                                <th>
+                                    <button id="botaoRemover"><img src="src/img/remove.svg"></button>
+                                </th>
+                            </tr>
+
+                            
+
+                        </tbody>
+                    </table>
+                </div>
+                <div class="retanguloUM"></div>
+                <div class="retanguloDOIS"></div>
+            </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="divisaoInputs">
+                <label class="label_entradas" for="valor">Valor do Produto</label>
+                <input class="entrada" type="number" name="valor" id="valordoproduto">
+            </div>
+
+            <div class="divisaoInputs">
+                <label class="label_entradas" for="quantidade">Quantidade</label>
+                <input class="entrada" type="number" name="quantidade" id="quantidadedoproduto">
+            </div>
+
+            <div class="divisaoInputs">
+                <label class="label_entradas" for="botao"></label>
+                <button class="entrada" id="botaoConfirmar" name="botao"><img src="src/img/confirm.svg"></button>
+            </div>
+        </div>
     </div>
 
     

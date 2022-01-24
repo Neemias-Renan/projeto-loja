@@ -31,6 +31,9 @@ body{
     flex-wrap: nowrap;
     padding: 0px 2em 0px 2em;
 }
+.mobile{
+    display: none;
+}
 
 .espaco{
     width: 50%;
@@ -158,24 +161,64 @@ th{
 .trDescricao{
     background-color: #F06363;
     border-radius: 10px;
-    /* padding: 6px; */
     position: absolute;
     z-index: 0;
-    left: 9em;
     width: 14em;
     padding: 1.5em 2em;
+    margin-left: -8em;
 }
 .marginTop{
     margin-top: 1em;
 }
 
-
-
-
-
+#botaoRemover{
+    background: #D94141;
+    box-shadow: -3px -3px 9px #F06363, 4px 3px 9px -1px rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+    border: none;
+    height: 100%;
+    width: 50%;
+    padding: 0.7em 1em;
+}
 
 #espacoDois{
-    background-color: burlywood;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    gap: 1em;
+
+}
+
+.divisao_espacoDois{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    margin: 9px 0em;
+}
+
+.label_saidas{
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.h1_valorFinal{
+    font-size: xxx-large;
+    font-weight: 300;
+}
+#ValorFinal{
+    font-weight: 800;
+}
+#inputValorPago{
+    padding: 1em 2em;
+    text-align: center;
+    font-weight: 600;
 }
 
 
@@ -186,8 +229,128 @@ th{
 
 
 
+@media (max-width: 769px) {
+    .desktop{
+        display: none;
+    }
+    .mobile{
+        display: flex;
+        height: 92%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+        
+    }
+    .header{
+        font-size: x-small;
+    }
+    .footer{
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+        background: #F9F9F9;
+        box-shadow: 0px 6px 39px rgb(0 0 0 / 12%);
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        padding: 1em 0em;
+        z-index: 5;
+    }
+    .label_entradas {
+        font-size: xx-small;
+        height: 1.5em;
+    }
+    .entrada {
+        background: #FFFFFF;
+        box-shadow: -3px -3px 9px #ffffff, 4px 3px 9px -1px rgb(0 0 0 / 25%);
+        border-radius: 7px;
+        border: none;
+        height: 2.6em;
+        width: 9em;
+    }
+    .divisaoInputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: fit-content;
+    }
+    .main {
+        width: -webkit-fill-available;
+        height: 90%;
+        background-color: #F9F9F9;
+        padding: 2em;
+    }
+    #botaoConfirmar {
+        width: 100%;
+    }
+    .divisaoUm_main{
+        width: 100%;
+        height: 7em;
+    }
+    .divisaoDois_main{
+        width: 100%;
+    }
+    .divisaoUm_main{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        gap: 1.1em;
+    }
+    .h1_valorFinal{
+        font-size: xx-large;
+        font-weight: 300;
+    }
+    #inputValorPago {
+        padding: 0.5em 1.5em;
+        text-align: end;
+        font-weight: 600;
+        box-shadow: none;
+        background: #FFFFFF;
+        box-shadow: inset 0px 1px 7px rgba(0, 0, 0, 0.07);
+    }
+    #resultadoFinal{
+        font-size: medium;
+    }
+    .divisao_espacoDois {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        margin: 9px 0em;
+        gap: 0.5em;
+    }
+    .cabecalho {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        gap: 10em;
+        margin-top: 4em;
+    }
+    .carrinho {
+        width: auto;
+        height: 13em;
+    }
+    .retanguloUM {
+        width: 20em;
+    }
+    .retanguloDOIS {
+        width: 18em;
+    }
+    .trDescricao {
+        background-color: #F06363;
+        border-radius: 10px;
+        position: absolute;
+        z-index: 0;
+        width: 13em;
+        padding: 1.5em 2em;
+        margin-left: -6em;
+    }
+    .tabela{
+        margin-top: 6em;
+    }
 
-
-.mobile{
-    display:none;
 }
