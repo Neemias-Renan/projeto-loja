@@ -313,7 +313,7 @@ th{
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
         gap: 1.1em;
     }
@@ -356,10 +356,10 @@ th{
         align-items: flex-start;
     }
     .retanguloUM {
-        width: 20em;
+        width: 18em;
     }
     .retanguloDOIS {
-        width: 18em;
+        width: 17em;
     }
     .trDescricao {
         background-color: #F06363;
@@ -372,6 +372,10 @@ th{
     }
     .tabela{
         /* margin-top: 6em; */
+    }
+
+    .trTabela{
+        gap: 0.5em;
     }
 
 }
