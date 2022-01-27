@@ -1,0 +1,42 @@
+{
+    "background_color": "#d94141",
+    "description": "Uma plataforma que acelera os cálculos das compras de produtos no seu estabelecimento.",
+    "dir": "ltr",
+    "lang":"pt-BR",
+    "display": "fullscreen",
+    "name": "Calcula Ae",
+    "orientation": "portrait",
+    "scope": "/index.html",
+    "short_name": "Calcula Ae",
+    "start_url": "/index.html",
+    "theme_color": "#d94141",
+    "categories": [],
+    "screenshots": [],
+    "icons": [
+        {
+            "src": "src/img/icon48.png",
+            "sizes": "48x48",
+            "type": "image/png"
+        }, {
+            "src": "src/img/icon72.png",
+            "sizes": "72x72",
+            "type": "image/png"
+        }, {
+            "src": "src/img/icon96.png",
+            "sizes": "96x96",
+            "type": "image/png"
+        }, {
+            "src": "src/img/icon144.png",
+            "sizes": "144x144",
+            "type": "image/png"
+        }, {
+            "src": "src/img/icon168.png",
+            "sizes": "168x168",
+            "type": "image/png"
+        }, {
+            "src": "src/img/icon192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        }],
+    "shortcuts": []
+  }
