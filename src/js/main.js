@@ -114,7 +114,7 @@ window.addEventListener('beforeinstallprompt', (e) => {
         setupButton = document.getElementById("setup_button");
     }
     // Show the setup button
-    setupButton.style.display = "inline";
+    setupButton.style.display = "flex";
     setupButton.disabled = false;
 });
 
