@@ -25,33 +25,13 @@
 
                 <div class="carrinho">
                     <table>
-                        <tbody class="tabela-carrinho">
+                        <tbody class="tabela-carrinho" id="tabela_carrinho">
                             <tr class="trTabela">
                                 <th class="thTitulo">Preço</th>
                                 <th class="thTitulo">Quantidade</th>
                                 <th class="thTitulo">Remover</th>
                             </tr>
                             
-                            <tr class="trTabela marginTop lista" id="tr1">
-                                <th class="thDescricao">R$7.00</th>
-                                <th class="thDescricao">5 Unidades</th>
-                                <th>
-                                    <button class="botaoRemover" onclick="remover('tr1')"><img src="src/img/remove.svg"></button>
-                                </th>
-                                <th class="trDescricao"></th>
-                            </tr>
-
-                            <tr class="trTabela marginTop lista" id="tr2">
-                                <th class="thDescricao">R$7.00</th>
-                                <th class="thDescricao">5 Unidades</th>
-                                <th>
-                                    <button class="botaoRemover" onclick="remover('tr2')"><img src="src/img/remove.svg"></button>
-                                </th>
-                                <th class="trDescricao"></th>
-                            </tr>
-
-                            
-
                         </tbody>
                     </table>
                 </div>
@@ -67,12 +47,12 @@
 
                 <div class="divisaoInputs">
                     <label class="label_entradas" for="quantidade">Quantidade</label>
-                    <input class="entrada" type="number" name="quantidade" id="quantidadedoproduto" placeholder="0">
+                    <input class="entrada" type="number" name="quantidade" id="quantidadedoproduto" placeholder="0" value="1">
                 </div>
 
                 <div class="divisaoInputs">
                     <label class="label_entradas" for="botao"></label>
-                    <button class="entrada" id="botaoConfirmar" name="botao" onclick="confirmar(valordoproduto,quantidadedoproduto)"><img src="src/img/confirm.svg"></button>
+                    <button class="entrada" id="botaoConfirmar" name="botao" onclick="add('valordoproduto','quantidadedoproduto')"><img src="src/img/confirm.svg"></button>
                 </div>
             </div>
         </div>
@@ -80,112 +60,18 @@
         <div class="espaco" id="espacoDois">
             <div class="divisao_espacoDois">
                 <label class="label_saidas" for="valorfinal">Valor Final</label>
-                <h1 class="h1_valorFinal" name="valorfinal">R$<span id="ValorFinal">07.90</span></h1>
+                <h1 class="h1_valorFinal" name="valorfinal">R$<span id="ValorFinal">00.00</span></h1>
             </div>
-            <div class="divisao_espacoDois">
+            <div class="divisao_espacoDois" id="div_valorpago">
                 <label class="label_saidas" for="valorpago">Valor Pago</label>
-                <input class="entrada" id="inputValorPago" title="Adicione o valor pago" name="valorpago" type="number" placeholder="R$00,00">
+                <input class="entrada" id="inputValorPago" title="Adicione o valor pago" onkeypress="calcularTroco()" name="valorpago" type="number" placeholder="R$00,00">
             </div>
-            <div class="divisao_espacoDois">
-                <h2>Devolva R$<span>2,10</span></h2>
+            <div class="divisao_espacoDois" id="valortroco">
+                <h2 class="espacoDois_h2">Devolva R$<span>00.00</span></h2>
             </div>
         </div>
     </div>
     
-    <div class="mobile">
-        <div class="main">
-            <div class="divisaoUm_main">
-                <div id="divUm_espacoUm">
-                    <label class="label_saidas" for="">Valor Final</label>
-                    <h1 class="h1_valorFinal">R$<span id="ValorFinalMobile">07.90</span></h1>
-                </div>
-
-                <div id="divUm_espacoDois">
-                    <div class="divisao_espacoDois">
-                        <label class="label_saidas" for="">Valor Pago</label>
-                        <input class="entrada" id="inputValorPagoMobile" type="number" placeholder="R$00,00">
-                    </div>
-                    <div class="divisao_espacoDois">
-                        <h2 id="resultadoFinal">Devolva R$<span>2,10</span></h2>
-                    </div>
-                </div>
-            </div>
-
-            <div class="divisaoDois_main">
-                <div id="divisaoUm_espacoDois">
-                <div class="cabecalho">
-                    <h3 id="tituloMobile-carrinho">Carrinho</h3>
-                    <a href="#" id="limparMobile" onclick="limpar()">Limpar</a>
-                </div>
-
-                <div class="carrinho">
-                    <table class="tabela">
-                        <tbody class="tabela-carrinho">
-                            <tr class="trTabela">
-                                <th class="thTitulo">Preço</th>
-                                <th class="thTitulo">Quantidade</th>
-                                <th class="thTitulo">Remover</th>
-                            </tr>
-
-                            <tr class="trTabela marginTop" id="tr1">
-                                <th class="thDescricao">R$7.00</th>
-                                <th class="thDescricao">5 Unidades</th>
-                                <th>
-                                    <button class="botaoRemover" onclick="remover('tr1')"><img src="src/img/remove.svg"></button>
-                                </th>
-                            </tr>
-
-                            <tr class="trTabela marginTop" id="tr2">
-                                <th class="thDescricao">R$7.00</th>
-                                <th class="thDescricao">5 Unidades</th>
-                                <th>
-                                    <button class="botaoRemover" onclick="remover('tr2')"><img src="src/img/remove.svg"></button>
-                                </th>
-                            </tr>
-
-                            <tr class="trTabela marginTop" id="tr3">
-                                <th class="thDescricao">R$7.00</th>
-                                <th class="thDescricao">5 Unidades</th>
-                                <th>
-                                    <button class="botaoRemover" onclick="remover('tr3')"><img src="src/img/remove.svg"></button>
-                                </th>
-                            </tr>
-
-                            <tr class="trTabela marginTop" id="tr4">
-                                <th class="thDescricao">R$7.00</th>
-                                <th class="thDescricao">5 Unidades</th>
-                                <th>
-                                    <button class="botaoRemover" onclick="remover('tr4')"><img src="src/img/remove.svg"></button>
-                                </th>
-                            </tr>
-
-                            
-
-                        </tbody>
-                    </table>
-                </div>
-                <div class="retanguloUM"></div>
-                <div class="retanguloDOIS"></div>
-            </div>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="divisaoInputs">
-                <label class="label_entradas" for="valor">Valor do Produto</label>
-                <input class="entrada" type="number" name="valor" title="adicione o valor do produto"id="valordoprodutoMobile" placeholder="R$00,00">
-            </div>
-
-            <div class="divisaoInputs">
-                <label class="label_entradas" for="quantidade">Quantidade</label>
-                <input class="entrada" type="number" name="quantidade" title="adicione a quantidade do produto" id="quantidadedoprodutoMobile" placeholder="0">
-            </div>
-
-            <div class="divisaoInputs">
-                <label class="label_entradas" for="botao"></label>
-                <button class="entrada" id="botaoConfirmarMobile" name="botao"><img src="src/img/confirm.svg"></button>
-            </div>
-        </div>
-    </div>
 
 </body>
 </html>

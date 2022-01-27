@@ -113,13 +113,15 @@ body{
 
 
 .carrinho{
+    height: 27em;
+    align-items: flex-start;
+
     background-color: #D94141;
     overflow: auto;
     color: white;
     width: 34em;
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
@@ -219,6 +221,7 @@ th{
 .label_saidas{
     font-weight: 600;
     color: rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 .h1_valorFinal{
@@ -242,8 +245,136 @@ th{
 
 
 
+@media (max-width:769px){
+    .header {
+        height: 10%;
+    }
+    .desktop {
+        position: absolute;
+        display: flex;
+        background-color: #F9F9F9;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 0;
+        height: 90%;
+    }
+    .carrinho {
+        width: auto;
+        height: 20em;
+        display: flex;
+        align-items: flex-start;
+    }
+    .retanguloDOIS {
+        width: 15em;
+    }
+    .retanguloUM{
+        width: 16em;
+    }
+    .cabecalho{
+        gap: 10em;
+    }
+    .trTabela {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 0em;
+    }
+    .entrada {
+        background: #FFFFFF;
+        box-shadow: -3px -3px 9px #ffffff, 4px 3px 9px -1px rgb(0 0 0 / 25%);
+        border-radius: 7px;
+        border: none;
+        height: 3em;
+        width: 100px;
+    }
+    .label_entradas {
+        height: 2em;
+        font-size: x-small;
+    }
+    #divisaoUm_espacoUm {
+        height: 85%;
+        margin-top: 3em;
+    }
+    #divisaoDois_espacoUm {
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        gap: 1em;
+        padding-top: 5%;
+        padding-bottom: 5%;
+        width: 100%;
+        background: white;
+    }
+    #espacoUm {
+        display: contents;
+    }
+    .divisaoInputs {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        height: -webkit-fill-available;
+    }
+    #espacoDois {
+        display: flex;
+        flex-direction: row;
+        gap: 4em;
+        position: absolute;
+        width: initial;
+        padding: initial;
+        align-items: center;
+        justify-content: center;
+    }
+    .label_saidas {
+        font-weight: 600;
+        color: rgba(0, 0, 0, 0.5);
+        z-index: 1;
+        font-size: small;
+    }
+    .h1_valorFinal {
+        font-size: xx-large;
+        font-weight: 300;
+    }
+    .divisao_espacoDois {
+        width: 100%;
+        height: 10%;
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        align-items: flex-start;
+        justify-content: center;
+        margin: 9px 0em;
+    }
+    .espacoDois_h2{
+        font-size: medium;
+    }
+    #valortroco{
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+        margin-top: 6em;
+        margin-left: auto;
+    }
+    #inputValorPago {
+        text-align: center;
+        font-weight: 600;
+        padding: inherit;
+    }
+    #div_valorpago{
+        display: flex;
+        align-items: flex-end;
+    }
+}
 
 
+/* 
 
 @media (max-width: 769px) {
     .desktop{
@@ -372,10 +503,9 @@ th{
     }
     .tabela{
         /* margin-top: 6em; */
-    }
+    /* }
 
     .trTabela{
         gap: 0.5em;
-    }
+    } */
 
-}
