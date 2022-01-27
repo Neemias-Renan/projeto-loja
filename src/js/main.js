@@ -15,6 +15,9 @@ function limpar(){
     document.getElementById('valordoproduto').value = ""
     document.getElementById('quantidadedoproduto').value = "1"
     document.getElementById('ValorFinal').innerHTML = "00.00"
+    document.getElementById('inputValorPago').value = ""
+    document.getElementById('espacoDois_h2').innerText = "Devolva R$"
+    document.getElementById('valorTroco').innerHTML = "00.00"
     valorfinal = 0
 }
 
@@ -70,6 +73,7 @@ function add(valor,quantidade){
     
         valorfinal = parseFloat(parseFloat(valorfinal)+parseFloat(valor*quantidade)).toFixed(2)
         document.getElementById('ValorFinal').innerHTML = valorfinal
+        calcularTroco()
     }
     if(valor!="NaN" && quantidade!="NaN" && quantidade!=0.00){
         document.getElementById('valordoproduto').value = ""
@@ -79,7 +83,20 @@ function add(valor,quantidade){
 
 
 function calcularTroco(){
-    valorpago = document.getElementById('inputValorPago').value
-    valorfinal = parseFloat(valorpago)-parseFloat(valorfinal)
-    console.log(valorfinal)
+    valorpago = parseFloat(document.getElementById('inputValorPago').value).toFixed(2)
+    if(valorpago != "NaN"){
+        valorf = parseFloat(parseFloat(valorpago)-parseFloat(valorfinal)).toFixed(2)
+        if(valorf < 0){
+            document.getElementById('espacoDois_h2').innerText = "Falta R$"
+            document.getElementById('valorTroco').innerText = valorf.replace('-','')
+        }
+        else{
+            document.getElementById('espacoDois_h2').innerText = "Devolva R$"
+            document.getElementById('valorTroco').innerText = valorf
+        }
+    }
+    else{
+        document.getElementById('valorTroco').innerText = '00.00'   
+    }
+    
 }

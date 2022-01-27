@@ -40,20 +40,22 @@
             </div>
 
             <div id="divisaoDois_espacoUm">
-                <div class="divisaoInputs">
-                    <label class="label_entradas" for="valor">Valor do Produto</label>
-                    <input class="entrada" type="number" name="valor" id="valordoproduto" placeholder="R$00,00">
-                </div>
+                <form method="dialog">
+                    <div class="divisaoInputs">
+                        <label class="label_entradas" for="valor">Valor do Produto</label>
+                        <input class="entrada" type="number" name="valor" id="valordoproduto" placeholder="R$00,00">
+                    </div>
 
-                <div class="divisaoInputs">
-                    <label class="label_entradas" for="quantidade">Quantidade</label>
-                    <input class="entrada" type="number" name="quantidade" id="quantidadedoproduto" placeholder="0" value="1">
-                </div>
+                    <div class="divisaoInputs">
+                        <label class="label_entradas" for="quantidade">Quantidade</label>
+                        <input class="entrada" type="number" name="quantidade" id="quantidadedoproduto" placeholder="0" value="1">
+                    </div>
 
-                <div class="divisaoInputs">
-                    <label class="label_entradas" for="botao"></label>
-                    <button class="entrada" id="botaoConfirmar" name="botao" onclick="add('valordoproduto','quantidadedoproduto')"><img src="src/img/confirm.svg"></button>
-                </div>
+                    <div class="divisaoInputs">
+                        <label class="label_entradas" for="botao"></label>
+                        <button class="entrada" id="botaoConfirmar" name="botao" onclick="add('valordoproduto','quantidadedoproduto')"><img src="src/img/confirm.svg"></button>
+                    </div>
+                </form>
             </div>
         </div>
     
@@ -64,10 +66,10 @@
             </div>
             <div class="divisao_espacoDois" id="div_valorpago">
                 <label class="label_saidas" for="valorpago">Valor Pago</label>
-                <input class="entrada" id="inputValorPago" title="Adicione o valor pago" onkeypress="calcularTroco()" name="valorpago" type="number" placeholder="R$00,00">
+                <input class="entrada" id="inputValorPago" title="Adicione o valor pago" onkeyup="calcularTroco()" name="valorpago" type="number" placeholder="R$00,00">
             </div>
             <div class="divisao_espacoDois" id="valortroco">
-                <h2 class="espacoDois_h2">Devolva R$<span>00.00</span></h2>
+                <h2 class="espacoDois_h2"><span id="espacoDois_h2">Devolva R$</span><span id="valorTroco">00.00</span></h2>
             </div>
         </div>
     </div>
